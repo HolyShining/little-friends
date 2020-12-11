@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Little Friends</title>
+        <meta name="description" content="Little Friends ...">
+        <meta name="viewport" content="device = device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+
+                    <!-- left menu -->
+                    <nav class="navbar">
+                        <div class="row">
+                            <h1><a href="../index.html" class="brand navbar-brand">Little Friends</a></h1>
+                            <img class="img-fluid" src="../../static/img/logo-dog.png">
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="row">
+                            <ul class="nav navbar-nav bd-navbar-nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Мій профіль</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="./my_announcements.html">Мої оголошення</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Повідомлення</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home/about.html">Про нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#l">Зворотній зв'язок</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-10">
+
+                    <!-- user photo -->
+                    <img class="avatar" src="../../static/img/rub.jpg" alt="Avatar">
+
+                    <div class="row">
+                        <div class="announcement col-11">
+
+                            <!-- announcement -->
+                            <div class="row">
+                                <div class="pad col-11">
+
+                                    <!--admin or user is owner-->
+                                    <p class="text-right"><a href="./edit.html"><i class="fas fa-edit"></i></a>
+                                        <a href="../index.html" onclick="return confirm('Чи дійсно ви хочете видалити дане оголошення?')"><i class="far fa-trash-alt"></i></a></p>
+                                    
+                                    <!--information about announcement-->
+                                    <h1 class="text-center">Title</h1>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h4>User</h4>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-right">12.12.2020-13.12.2020 00:00</p>
+                                        </div>
+                                    </div>
+                                    <article>
+                                        description descriptiondescription description description description description description description descriptiondescription description description description description description description descriptiondescription description description description description description
+                                    </article>
+                                    <br>
+                                    <p><strong>Теги:</strong>
+                                    #pppp #ppppp</p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--information about pets-->
+                    <div class="row">
+                        <div class="announcement col-11">
+                            <br>
+                            <h2 class="text-center">Домашній улюбленець</h2>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <p><strong>Ім'я:</strong></p>
+                                            <p><strong>Порода: </strong></p>
+                                            <p><strong>Уподобання:</strong></p>
+                                        </div>
+                                        <div class="col-5">
+                                            <p>Бобік</p>
+                                            <p>Хаскі</p>
+                                            <p>Білки, коти, печево, кісточки</p>
+                                        </div>
+                                        <div class="col-5">
+                                            <img src="../../static/img/bobik.jpg" class="pet img-fluid">
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="announcement col-11">
+                            <br>
+                            <h2 class="text-center">Коментарі</h2>
+
+                            <!--add comments-->
+                            <form class="form row" method="POST">
+                                <div class="col-10">
+                                    <input type="text" class="form-control" name="comment" placeholder="Введіть коментар">
+                                </div>
+                                <div class="col-2">
+                                <input type="submit" class="btn btn-light" value="Додати">
+                            </div>
+                            </form>
+
+                            <!--comments-->
+                            <div class="comment container-fluid">
+                                <div class="row">
+                                    <div class="pad col-5">
+                                        <strong>User</strong>
+                                    </div>
+                                    <div class="col-5">
+                                        <p class="text-right">23.12.2020 00:00</p>
+                                    </div>
+
+                                    <!--for owner and admin-->
+                                    <div class="col-1">
+                                        <p class="text-right"><a href="./edit.html"><i class="fas fa-edit"></i></a>
+                                            <a href="#" onclick="return confirm('Чи дійсно ви хочете видалити дане оголошення?')"><i class="far fa-trash-alt"></i></a>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="pad col-11">
+                                        <p>
+                                            asdfghjkl;asdfghjkl;   asdfghjklwertyuio zxcvbnm,.dfghj
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html

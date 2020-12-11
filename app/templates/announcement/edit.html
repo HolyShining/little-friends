@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Little Friends</title>
+        <meta name="description" content="Little Friends ...">
+        <meta name="viewport" content="device = device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+
+                    <!-- left menu -->
+                    <nav class="navbar">
+                        <div class="row">
+                            <h1><a href="../index.html" class="brand navbar-brand">Little Friends</a></h1>
+                            <img class="img-fluid" src="../../static/img/logo-dog.png">
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="row">
+                            <ul class="nav navbar-nav bd-navbar-nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Мій профіль</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="./my_announcements.html">Мої оголошення</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Повідомлення</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home/about.html">Про нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Зворотній зв'язок</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-10">
+
+                    <!-- user photo -->
+                    <img class="avatar" src="../../static/img/rub.jpg" alt="Avatar">
+
+                    <div class="row">
+                        <div class="announcement col-11">
+                            <h2 class="pad text-center">Змінити оголошення</h2>
+                            <hr>
+
+                            <!-- form for change inf about announcement-->
+                            <form method="POST" class="form text-center">
+                                <div class="pad row">
+                                    <div class="col-2">
+                                        <label for="title" class="">Заголовок:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="text" id="title" class="form-control" value="Title">
+                                    </div>
+                                </div>
+                                <div class="pad row">
+                                    <div class="col-2">
+                                        <label for="description" class="">Опис:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <textarea id="description" class="form-control">description descriptiondescription description description description description description description descriptiondescription description description description description description description descriptiondescription description description description description description</textarea>
+                                    </div>
+                                </div>
+                                <div class="pad row">
+                                    <div class="col-2">
+                                        <label for="pets" class="">Домашні улюбенці:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select id="pets" class="form-control">
+                                            <option>Бобік</option>
+                                            <option>Мерчі</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pad row">
+                                    <div class="col-2">
+                                        <label for="hashtag" class="">Хештег:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select id="hashtag" class="form-control">
+                                            <option>зззз</option>
+                                            <option>ииииии</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pad row">
+                                    <div class="col-2">
+                                        <label class="">Дати:</label>
+                                    </div>
+                                    <div class="col-5 form-inline">
+                                        <input type="date" class="form-control" value="12/12/2020"> <i> - </i>
+                                        <input type="date" class="form-control" value="2020/12/12">
+                                    </div>
+                                    <div class="col-1">
+                                        <label class="">Час:</label>
+                                    </div>
+                                    <div class="col-3 form-inline">
+                                        <input type="time" class="form-control" value="12:12">
+                                    </div>
+                                    <div class="col-1">
+                                        <p class="pad text-left"> <a href="../index.html" onclick="return confirm('Чи дійсно ви хочете видалити дане оголошення?')"><i class="far fa-trash-alt"></i></a></p>
+                                    </div>
+                                </div>
+                                <br>
+                                <input type="submit" class="btn btn-dark" value="Зберегти">
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </body>
+</html

@@ -1,0 +1,102 @@
+.brand{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Cormorant Garamond';
+    margin-left: 0.2em;
+    letter-spacing: 0.1em;
+}
+.brand:hover{
+    color:black;
+}
+
+.brand-not{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Cormorant Garamond';
+    margin-left: 0.2em;
+    letter-spacing: 0.2em;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+.avatar{
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-left: 45%;
+    margin-bottom: 1%;
+}
+hr {width: 100%;margin-left: auto;margin-right: auto;}
+
+.top-menu{
+    font-size: 1.1em;
+    text-align: center;
+    padding-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.top-menu-item{
+    text-align: center;
+    padding-top: 1em;
+    padding-right: 1em;
+    border: white solid;
+    background-color: white;
+}
+.img-fluid{
+    min-width: 120px;
+}
+
+.nav-item{
+    padding-left: 1em;
+}
+.nav-link{
+    color:black;
+}
+
+.nav-link:hover{
+    color:grey;
+}
+
+.announcement{
+    margin-top: 1em;
+    margin-left: 4em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.user-img{
+    margin-top: 0.5em;
+    vertical-align: middle;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+}
+.announcement-link{
+    color:darkblue;
+    text-decoration: underline;
+}
+
+.announcement-link:hover{
+    color: blue;
+}
+
+.pad{
+    margin-left: 3%;
+    margin-top: 1em;
+}
+
+.comment{
+    border: gray solid 1px;
+    margin: 1em;
+    border-radius: 5px;
+
+}
+
+.pet{
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
