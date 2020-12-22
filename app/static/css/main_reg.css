@@ -1,0 +1,13 @@
+p{
+  text-align: center;
+  font: "Poiret One";
+  color: #73aafd;
+  text-shadow: 0 0 2px #73aafd;
+}
+
+#regForm {
+  margin: 15px auto;
+  padding: 4px;
+  width: 27%;
+  min-width: 300px;
+}

@@ -1,0 +1,60 @@
+.img-fluid{
+    width:180px;
+    min-width: 110px;
+}
+
+.brand{
+    color: black;
+    left: 122px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Cormorant Garamond';
+    margin-left: 0.7em;
+    letter-spacing: 0.2em;
+}
+.brand:hover{
+    color:black;
+}
+
+.nav-item{
+    padding-left: 1em;
+}
+
+.nav-link{
+    color:black;
+}
+
+.nav-link:hover{
+    color:grey;
+}
+
+hr {width: 100%;
+}
+
+.hr {
+  position: inherit;
+  top:15px;
+  bottom:15px;
+  left: 230px;
+  width: 1px;
+  height: 100vh;
+  background-color: #e5e5e5;
+  margin-left: 0;
+  margin-right: 0;
+  display: inline-table;
+}
+
+.avatar{
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-left: 45%;
+    margin-bottom: 2%;
+    /* background-color: #c7c8c8; */
+}
+
+input {
+  color: black;
+}

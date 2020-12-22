@@ -1,0 +1,8 @@
+textarea[name=message] {
+  resize: none;
+  overflow: auto;
+}
+
+.col-md-4 {
+  margin-top: 6em;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Little Friends</title>
+        <meta name="description" content="Little Friends ...">
+        <meta name="viewport" content="device = device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../templates/css/reg_radio.css">
+        <link rel="stylesheet" type="text/css" href="../templates/css/registration.css">
+        <link rel="stylesheet" type="text/css" href="../templates/css/main_reg.css">
+        <script src="../templates/js/main.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    </head>
+    <body>
+      <header>
+        <div class="logoplace">
+          <div class="logo">
+            <img src="../templates/img/logo1.png" height="80px">
+          </div>
+          <div class="hr"></div>
+          <div class="">
+            <h1>LittleFriends</h1>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid">
+        <p>ВВЕДІТЬ ДАНІ ДЛЯ РЕЄСТРАЦІЇ</p>
+        <form id="regForm" method="post">
+          <div>Особисті дані:
+            <p><input class="form-control" type="text" maxlength="50" minlength="3" placeholder="Повне ім'я..." name="full_name" required></p>
+            <p><input class="form-control" type="text" min="1965-01-01" max="2005-01-01" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Дата народження..." name="date_of_birth" required></p>
+            <p><input class="form-control" type="text" maxlength="15" minlength="5" placeholder="Країна, місто..." name="address" required></p>
+          </div>
+
+          <div class="form_radio_group">
+            <div class="form_radio_group-item">
+              <input id="radio-1" type="radio" name="radio" value="1" checked>
+              <label for="radio-1">Власник улюбленця</label>
+            </div>
+            <div class="form_radio_group-item">
+              <input id="radio-2" type="radio" name="radio" value="2">
+              <label for="radio-2">Ще не маю улюбленця</label>
+            </div>
+          </div>
+
+          <div>Контактна інформація:
+            <p><input type="tel" maxlength="13" minlength="13" pattern="\+380[39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99][0-9]{7}" title="Введений телефон має мати наступний вигляд:<br>+380xxxxxxxxx" placeholder="Номер телефону..." name="email" required></p>
+            <p><input type="email" maxlength="40" minlength="10" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail..." name="email" required></p>
+          </div>
+
+          <div>Пароль
+            <p><input type="password" maxlength="30" minlength="8" placeholder="Введіть пароль..." name="psw" required></p>
+            <p><input type="password" placeholder="Введіть повторно..." name="psw-repeat" required></p>
+          </div>
+          <p><a ><button type="submit" class="btn btn-outline-primary" name="button">Зареєструватись</button></a></p>
+        </form>
+        <p>Вже маєте акаунт? <a href="./log_in.html">Увійдіть</a>.</p>
+      </div>
+    </div>
+  </body>
+</html>

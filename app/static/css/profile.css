@@ -1,0 +1,61 @@
+
+.name_surn {
+  font-weight: bold;
+  font-family: 'Cormorant Garamond';
+}
+
+.petlist img{
+  margin-left: 1%;
+}
+
+.petlist p{
+  visibility: visible;
+  display: inline;
+  margin-left: 3%;
+}
+svg {
+  margin: 1%;
+}
+
+.placeholder_add p {
+  display: inline;
+  visibility: hidden;
+  font-family: 'Cormorant Garamond';
+  font: 'Cormorant Garamond';
+  margin-left: 2%;
+  font-size: 18px;
+}
+.add_pet{
+  display: inline;
+}
+
+.placeholder_add a{
+  display: inline;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #212529;
+}
+
+.placeholder_add a:hover{
+  display: inline;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #212529;
+}
+
+.editinf {
+  display: inline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.form-control-plaintext:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+label {
+  display:block;
+}

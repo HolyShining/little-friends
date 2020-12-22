@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Little Friends</title>
+        <meta name="description" content="Little Friends ...">
+        <meta name="viewport" content="device = device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/profile.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../templates/js/profile.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <!-- left menu -->
+                    <nav class="navbar">
+                        <div class="row">
+                            <h1><a href="./index.html" class="brand navbar-brand">Little Friends</a></h1>
+                            <img class="img-fluid" src="../templates/img/logo-dog.png">
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="row">
+                            <ul class="nav navbar-nav bd-navbar-nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="./index.html">Головна</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./left_menu/message.html">Повідомлення</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./left_menu/about.html">Про нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./left_menu/contact.html">Зворотній зв'язок</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- main part -->
+                <div class="col-10" >
+                  <div class="col-12">
+                  <img class="avatar" src="../templates/img/rub.jpg" alt="Avatar">
+                  <center><h2 clas="brand">First_nameLast_name</h2></center>
+                  <!-- tabs "pets" and "owner" -->
+                  <ul class="nav nav-tabs" id="profileTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="pets-tab" data-toggle="tab" href="#pets" role="tab" aria-controls="pets" aria-selected="true">Улюбленці</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="owner-tab" data-toggle="tab" href="#owner" role="tab" aria-controls="owner" aria-selected="false">Особиста інформація</a>
+                    </li>
+                    <li>
+                      <div class="clearfix">
+                        <a></a>
+                    </li>
+                  </ul>
+                  <!-- content for "pets" -->
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="pets" role="tabpanel" aria-labelledby="pets-tab">
+                      <div class="placeholder_add">
+                        <a href="./pet/new_pet.html">
+                          <svg class="add_pet" onmouseover="show_addpet()" onmouseout="show_addpet()" type="button" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                        </a>
+                        <p id="p1_hidden">Додати улюбленця</p>
+                      </div>
+
+                      <!-- list of pets -->
+                      <div class="petlist">
+                        <div><a href='./pet/pet_info.html'><img class="avatar" id="1pet" src="../static/img/1.jpg"></a><p>pet1</p></div>
+                        <div><a href='./pet/pet_info.html'><img class="avatar" id="2pet" src="../static/img/1.jpg"></a><p>pet2</p></div>
+                      </div>
+                    </div>
+                    <!-- content for "owner" -->
+                    <div class="tab-pane fade" id="owner" role="tabpanel" aria-labelledby="owner-tab">
+
+                      <div class="placeholder_add d-inline">
+                        <a href="./edit_userinfo.html">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="editinf" onmouseover="show_editinf()" onmouseout="show_editinf()" type="button" width="2em" height="2em" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                          </svg>
+                        </a>
+                        <p id="p2_hidden">Редагувати інформацію</p>
+                      </div>
+                    </div>
+                      <form>
+                        <div class="form-group row">
+                          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="staticDate_of_birth" class="col-sm-2 col-form-label">Дата Народження</label>
+                          <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticDate_of_birth" value="xx-xx-xxxx">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="staticPhone" class="col-sm-2 col-form-label">Телефон</label>
+                          <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticPhone" value="+38-xxx-xxx-xx-xx">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="staticAddress" class="col-sm-2 col-form-label">Адреса</label>
+                          <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticAddress" value="Country-City">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+    </body>
+</html
