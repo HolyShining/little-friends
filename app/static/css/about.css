@@ -1,0 +1,14 @@
+h2 {
+  padding-top: 3em;
+  padding-bottom: 2em;
+  text-align: center;
+  font-style: italic;
+  font-size: 60px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond';
+  font: 'Cormorant Garamond';
+}
