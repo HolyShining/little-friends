@@ -17,6 +17,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     </head>
     <body>
         <div class="container-fluid">
@@ -84,6 +86,10 @@
                                     </div>
                                 </div>
 
+                                 <!--for user without pet-->
+                                 <input type="radio" name="pet" value="true" checked hidden>
+                                 <!--end for user without pet-->
+
                                 <!--for pet owners-->
                                 <div class="pad row">
                                     <div class="col-6 text-center">
@@ -100,10 +106,13 @@
                                         <label for="pets">Домашні улюбенці:</label>
                                     </div>
                                     <div class="col-9">
-                                        <select id="pets" class="form-control">
-                                            <option></option>
-                                            <option>Мерчі</option>
-                                        </select>
+                                        <details class="text-left">
+                                            <summary></summary>
+                                            <input type="checkbox"><label>Bobik</label>
+                                            <br>
+                                            <input type="checkbox"><label>Мерчі</label>
+                                            <br>
+                                        </details>
                                     </div>
                                 </div>
                                 <!--end for pet owner-->
@@ -113,11 +122,15 @@
                                         <label for="hashtag" class="">Хештег:</label>
                                     </div>
                                     <div class="col-9">
-                                        <select id="hashtag" class="form-control">
-                                            <option></option>
-                                            <option>зззз</option>
-                                            <option>ииииии</option>
+                                        <select class="js-example-basic-multiple form-control" id="hashtag" name="states[]" multiple="multiple">
+                                            <option value="">Alabama</option>
+                                            <option value="">Wyoming</option>
                                         </select>
+                                        <script>
+                                            $(document).ready(function() {
+                                                $('.js-example-basic-multiple').select2();
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                                 <div class="pad row">
