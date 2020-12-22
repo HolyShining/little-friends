@@ -40,3 +40,7 @@ async def about(request: Request, id_: str):
 @router.get("/announcements/{id_}/edit")
 async def about(request: Request, id_: str):
     return TEMPLATES.TemplateResponse("announcement/edit.html", {"request": request})
+
+@router.get("/announcement/create")
+async def about(request: Request):
+    return TEMPLATES.TemplateResponse("announcement/create.html", {"request": request})
