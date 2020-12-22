@@ -17,6 +17,10 @@ async def home(request: Request):
 async def profile(request: Request):
     return TEMPLATES.TemplateResponse("profile.html", {"request": request})
 
+@router.get("/profile/edit")
+async def profile(request: Request):
+    return TEMPLATES.TemplateResponse("edit_userinfo.html", {"request": request})
+
 @router.get("/announcements")
 async def announcements(request: Request):
     return TEMPLATES.TemplateResponse("announcement/my_announcements.html", {"request": request})
@@ -44,3 +48,11 @@ async def about(request: Request, id_: str):
 @router.get("/announcement/create")
 async def about(request: Request):
     return TEMPLATES.TemplateResponse("announcement/create.html", {"request": request})
+
+@router.get("/pet/new")
+async def about(request: Request):
+    return TEMPLATES.TemplateResponse("pet/new_pet.html", {"request": request})
+
+@router.get("/pets/{id_}")
+async def about(request: Request, id_: str):
+    return TEMPLATES.TemplateResponse("pet/pet_info.html", {"request": request})
