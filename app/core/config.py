@@ -6,6 +6,7 @@ from databases import DatabaseURL
 from loguru import logger
 from starlette.config import Config
 from starlette.datastructures import CommaSeparatedStrings, Secret
+from starlette.templating import Jinja2Templates
 
 from app.core.logging import InterceptHandler
 
@@ -42,3 +43,5 @@ for logger_name in LOGGERS:
     logging_logger.handlers = [InterceptHandler(level=LOGGING_LEVEL)]
 
 logger.configure(handlers=[{"sink": sys.stderr, "level": LOGGING_LEVEL}])
+
+TEMPLATES = Jinja2Templates(directory='app/templates')

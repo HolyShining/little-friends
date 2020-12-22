@@ -25,33 +25,7 @@
           <div class="row">
             <div class="col-2">
               <!-- left menu -->
-              <nav class="navbar">
-                <div class="row">
-                  <h1><a href="../index.html" class="brand navbar-brand">Little Friends</a></h1>
-                  <img class="img-fluid" src="../../static/img/logo-dog.png">
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                  <ul class="nav navbar-nav bd-navbar-nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="../profile.html">Мій профіль</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../left_menu/message.html">Повідомлення</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../left_menu/about.html">Про нас</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../left_menu/contact.html">Зворотній зв'язок</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+              {% include 'menu.html' %}
             </div>
             <!-- main part -->
             <div class="col-10" >

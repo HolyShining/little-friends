@@ -5,8 +5,6 @@ from asyncpg import Connection, Record
 from app.db.errors import EntityDoesNotExist
 from app.db.queries.queries import queries
 from app.db.repositories.base import BaseRepository
-from app.db.repositories.profiles import ProfilesRepository
-from app.models.domain.announcements import Announcement
 from app.models.domain.comments import Comment
 from app.models.domain.users import User
 
@@ -20,13 +18,13 @@ class CommentsRepository(BaseRepository):
         self,
         *,
         comment_id: int,
-        announcement: Announcement,
+        announcement: any = None, 
         user: Optional[User] = None,
     ) -> Comment:
         comment_row = await queries.get_comment_by_id_and_slug(
             self.connection,
             comment_id=comment_id,
-            announcement_slug=announcement.slug,
+            announcement_slug=announcement,
         )
         if comment_row:
             return await self._get_comment_from_db_record(
@@ -42,12 +40,12 @@ class CommentsRepository(BaseRepository):
     async def get_comments_for_announcement(
         self,
         *,
-        announcement: Announcement,
+        announcement: any,
         user: Optional[User] = None,
     ) -> List[Comment]:
         comments_rows = await queries.get_comments_for_announcement_by_slug(
             self.connection,
-            slug=announcement.slug,
+            slug=announcement,
         )
         return [
             await self._get_comment_from_db_record(
@@ -62,13 +60,13 @@ class CommentsRepository(BaseRepository):
         self,
         *,
         body: str,
-        announcement: Announcement,
+        announcement,
         user: User,
     ) -> Comment:
         comment_row = await queries.create_new_comment(
             self.connection,
             body=body,
-            announcement_slug=announcement.slug,
+            announcement_slug=announcement,
             author_username=user.name,
         )
         return await self._get_comment_from_db_record(
