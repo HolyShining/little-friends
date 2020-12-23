@@ -33,17 +33,24 @@ hr {width: 100%;margin-left: auto;margin-right: auto;}
 
 .top-menu{
     font-size: 1.1em;
-    text-align: center;
-    padding-bottom: 1em;
+    background-image: url("../img/patt.jpg");
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 1em;
 }
-.top-menu-item{
-    text-align: center;
-    padding-top: 1em;
-    padding-right: 1em;
-    border: white solid;
-    background-color: white;
+
+.overlay {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 1em;
 }
+
+.lab-hash{
+    color: black;
+    text-shadow: white;
+    font-weight: bold;
+    font-family: 'Cormorant Garamond';
+    font-size: x-large;
+}
+
 .img-fluid{
     min-width: 120px;
 }
