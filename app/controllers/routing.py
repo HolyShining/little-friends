@@ -1,5 +1,5 @@
 from starlette.requests import Request
-from starlette.responses import HTMLResponse
+from starlette.responses import HTMLResponse, RedirectResponse
 from app.core.config import TEMPLATES
 from fastapi import APIRouter
 from fastapi.applications import FastAPI
@@ -48,6 +48,10 @@ async def about(request: Request, id_: str):
 @router.get("/announcements/{id_}/edit")
 async def about(request: Request, id_: str):
     return TEMPLATES.TemplateResponse("announcement/edit.html", {"request": request})
+
+@router.post("/announcements/{id_}/edit")
+async def profile(request: Request, id_: str):
+    return TEMPLATES.TemplateResponse("announcement/details.html", {"request": request})
 
 @router.get("/announcement/create")
 async def about(request: Request):
