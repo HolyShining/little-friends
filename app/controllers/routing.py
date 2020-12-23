@@ -29,6 +29,10 @@ async def announcements(request: Request):
 async def messages(request: Request):
     return TEMPLATES.TemplateResponse("left_menu/message.html", {"request": request})
 
+@router.get("/messages/{id_}")
+async def messages(request: Request, id_: str):
+    return TEMPLATES.TemplateResponse("show_message.html", {"request": request})
+
 @router.get("/about")
 async def about(request: Request):
     return TEMPLATES.TemplateResponse("left_menu/about.html", {"request": request})
