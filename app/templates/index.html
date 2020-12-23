@@ -17,6 +17,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     </head>
     <body>
         <link rel="import" href="home/about.html">
@@ -36,12 +39,13 @@
                         <div class="row">
                             <ul class="nav navbar-nav bd-navbar-nav flex-column">
 
-                                <!--user isn`t logged in
+                                <!--user isn`t logged in-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="./login.html">Вхід</a>
-                                </li>-->
+                                </li>
+                                <!--end user isn`t logged in-->
 
-                                <!--user is logged-->
+                                <!--user is logged in-->
                                 <li class="nav-item">
                                     <a class="nav-link active" href="./my_profile.html">Мій профіль</a>
                                 </li>
@@ -51,8 +55,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="./message.html">Повідомлення</a>
                                 </li>
+                                <!--end user is logged in-->
 
-                                <!--for both-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="./home/about.html">Про нас</a>
                                 </li>
@@ -60,23 +64,25 @@
                                     <a class="nav-link" href="./contact.html">Зворотній зв'язок</a>
                                 </li>
 
-                                <!--user is logged-->
+                                <!--user is logged in-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="./login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
                                 </li>
+                                <!--end user is logged in-->
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="col-10">
 
-                    <!--user isn`t logged in
+                    <!--user isn`t logged in-->
                     <div class="row">
                         <div class="col-12">
                             <h1 class="brand-not">Little Friends</h1>
                             <hr>
                         </div>
-                    </div>-->
+                    </div>
+                    <!--end user isn`t logged in-->
 
                     <!--user is logged in-->
                     <!-- user photo -->
@@ -85,29 +91,25 @@
 
                     <!-- top menu -->
                     <div class="top-menu">
+                        <div class="overlay">
                         <div class="row">
-                            <div class="col-4">
-                                <input type="submit" value="Всі оголошення" class="top-menu-item"/>
+                            <div class="col-4 text-right">
+                                <label class="lab-hash" for="hashtag">Хештеги:</label>
                             </div>
-
-                            <!-- filter looking for all or using hashtag -->
-                            <div class="col-4">
-                                <select class="top-menu-item">hello
-                                    <option>Шукаю</option>
-                                    <option>muy</option>
-                                </select>
-                            </div>
-
-                            <!-- filter offer all or using hashtag -->
-
-                            <div class="col-4">
-                                <select class="top-menu-item">
-                                    <option>Пропоную</option>
-                                    <option>muy</option>
-                                </select>
+                            <div class="col-6">
+                                <!--hashtags-->
+                                    <select class="js-example-basic-multiple form-control" id="hashtag" name="states[]" multiple="multiple">
+                                        <option value="">Шукаю</option>
+                                        <option value="">Пропоную</option>
+                                        <option value="">Alabama</option>
+                                        <option value="">Wyoming</option>
+                                    </select>
+                                    <script src="../static/js/select.js"></script>
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <!--end user is logged in-->
 
                     <div class="row">
                         <div class="announcement col-md-3">
@@ -128,6 +130,7 @@
                                 
                                 <!--user is logged-->
                                 <a href="./announcement/details.html" class="announcement-link">Докладніше</a>
+                                <!--end user is logged in-->
                             </div>
 
                         </div>
