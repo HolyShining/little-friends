@@ -58,12 +58,6 @@ async def register(
     user_create: UserInCreate = Body(..., embed=True, alias="user"),
     users_repo: UsersRepository = Depends(get_repository(UsersRepository)),
 ) -> UserInResponse:
-    if await check_username_is_taken(users_repo, user_create.name):
-        raise HTTPException(
-            status_code=HTTP_400_BAD_REQUEST,
-            detail=strings.USERNAME_TAKEN,
-        )
-
     if await check_email_is_taken(users_repo, user_create.email):
         raise HTTPException(
             status_code=HTTP_400_BAD_REQUEST,

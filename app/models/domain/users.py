@@ -12,9 +12,9 @@ class User(InternalModel):
     email: str
     address: str
     pet_owner: bool
-    admin: bool
-    block: bool
-    photo: Optional[str] = None
+    # admin: bool
+    # block: bool
+    # photo: Optional[str] = None
 
 
 class UserInDB(IDModelMixin, DateTimeModelMixin, User):
