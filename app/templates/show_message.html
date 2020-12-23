@@ -1,94 +1,111 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Little Friends</title>
+    <meta name="description" content="Little Friends ..." />
+    <meta name="viewport" content="device = device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/show_message.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Little Friends</title>
-      <meta name="description" content="Little Friends ...">
-      <meta name="viewport" content="device = device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="../templates/css/main.css">
-      <link rel="stylesheet" type="text/css" href="../templates/css/show_message.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/static/js/profile.js"></script>
+    <!-- <script type="text/javascript" src="../templates/js/new_pet.js"></script> -->
 
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="../templates/js/profile.js"></script>
-      <!-- <script type="text/javascript" src="../templates/js/new_pet.js"></script> -->
-
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    </head>
-    <body>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-2">
-            <!-- left menu -->
-            <nav class="navbar">
-              <div class="row">
-                <h1><a href="#" class="brand navbar-brand">Little Friends</a></h1>
-                <img class="img-fluid" src="../templates/img/logo-dog.png">
-              </div>
-              <br>
-              <hr>
-              <div class="row">
-                <ul class="nav navbar-nav bd-navbar-nav flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="./profile.html">Мій профіль</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="./announcement/my_announcements.html">Мої оголошення</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./message.html">Повідомлення</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./about.html">Про нас</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contact.html">Зворотній зв'язок</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="col-10" >
-            <div class="row">
-              <div class="col-12">
-              <img class="avatar small" src="../templates/img/rab2.jpg" alt="Avatar">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <!-- left menu -->
+          {% include 'menu.html' %}
+        </div>
+        <div class="col-10">
+          <div class="row">
+            <div class="col-12">
+              <img
+                class="avatar small"
+                src="/static/img/rab2.jpg"
+                alt="Avatar"
+              />
               <p class="message-inf">Ліза Дячунко</p>
-                <div class="info_form">
-                  <div class="mess_block" data-spy="scroll">
-                    <p class="text-center ">-- 18-12-2020 --</p>
-                    <div class="float-left">
-                      <p id="from" cols="50" readonly>Привіт! Ти сьогодні з Пікі будеш в парку?</p><span class="left">18:50</span><br>
-                    </div>
-                    <br>
-                    <div class="float-right">
-                      <p id="to" cols="50" readonly>Привіт, сьогодні в мене ніяк не вийде(</p><span class="right">18:52</span><br>
-                      <p id="to" cols="50" readonly>Ти могла б взяти його сьогодні на прогулянку?</p><span class="right">18:52</span><br>
-                      <p id="to" cols="50" readonly>Думаю Каспер і Лакі будуть раді. То як, змогла б?</p><span class="right">18:53</span><br>
-                    </div>
-                    <br>
-                    <div class="float-left">
-                      <p id="from" cols="50" readonly>Так, звичайно)</p><span>18:53</span><br>
-                      <p id="from" cols="50" readonly>Але я зможу забрати його до нас лише в 8, бо зараз жахливі затори, і я не впевнена, що буду вчасно.</p><span>18:54</span><br>
-                    </div>
-                    <br>
+              <div class="info_form">
+                <div class="mess_block" data-spy="scroll">
+                  <p class="text-center">-- 18-12-2020 --</p>
+                  <div class="float-left">
+                    <p id="from" cols="50" readonly>
+                      Привіт! Ти сьогодні з Пікі будеш в парку?
+                    </p>
+                    <span class="left">18:50</span><br />
                   </div>
-                  <hr>
-                  <div class="">
-                    <textarea name="type_mess" rows="8" cols="80"></textarea>
+                  <br />
+                  <div class="float-right">
+                    <p id="to" cols="50" readonly>
+                      Привіт, сьогодні в мене ніяк не вийде(
+                    </p>
+                    <span class="right">18:52</span><br />
+                    <p id="to" cols="50" readonly>
+                      Ти могла б взяти його сьогодні на прогулянку?
+                    </p>
+                    <span class="right">18:52</span><br />
+                    <p id="to" cols="50" readonly>
+                      Думаю Каспер і Лакі будуть раді. То як, змогла б?
+                    </p>
+                    <span class="right">18:53</span><br />
                   </div>
+                  <br />
+                  <div class="float-left">
+                    <p id="from" cols="50" readonly>Так, звичайно)</p>
+                    <span>18:53</span><br />
+                    <p id="from" cols="50" readonly>
+                      Але я зможу забрати його до нас лише в 8, бо зараз жахливі
+                      затори, і я не впевнена, що буду вчасно.
+                    </p>
+                    <span>18:54</span><br />
+                  </div>
+                  <br />
+                </div>
+                <hr />
+                <div class="">
+                  <textarea name="type_mess" rows="8" cols="80"></textarea>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </body>
+    </div>
+  </body>
 </html>

@@ -27,51 +27,7 @@
             <div class="row">
                 <div class="col-2">
                     <!-- left menu -->
-                    <nav class="navbar">
-                        <div class="row">
-                            <!-- without h1 if user isn`t logged in -->
-                            <!-- with h1 if user is logged -->
-                            <h1><a href="#" class="brand navbar-brand">Little Friends</a></h1>
-                            <img class="img-fluid" src="../static/img/logo-dog.png">
-                        </div>
-                        <br>
-                        <hr>
-                        <div class="row">
-                            <ul class="nav navbar-nav bd-navbar-nav flex-column">
-
-                                <!--user isn`t logged in-->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./login.html">Вхід</a>
-                                </li>
-                                <!--end user isn`t logged in-->
-
-                                <!--user is logged in-->
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="./my_profile.html">Мій профіль</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="./announcement/my_announcements.html">Мої оголошення</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./message.html">Повідомлення</a>
-                                </li>
-                                <!--end user is logged in-->
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./home/about.html">Про нас</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./contact.html">Зворотній зв'язок</a>
-                                </li>
-
-                                <!--user is logged in-->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
-                                </li>
-                                <!--end user is logged in-->
-                            </ul>
-                        </div>
-                    </nav>
+                    {% include 'menu.html' %}
                 </div>
                 <div class="col-10">
 
@@ -117,7 +73,7 @@
                             <!-- announcement -->
                             <div class="row">
                                 <div class="col-4">
-                                     <img src="../static/img/rub.jpg" class="user-img"/>
+                                     <img src="/static/img/rub.jpg" class="user-img"/>
                                 </div>
                                 <div class="col-8">
                                     <h2>User</h2>
@@ -125,12 +81,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <img src="../static/img/800846.jpg" class="img-fluid">
+                                <img src="/static/img/800846.jpg" class="img-fluid">
                                 <p>sdfghjkl;'sdfghjkl;'sdfghjkl;sdfghjk</p>
                                 
                                 <!--user is logged-->
-                                <a href="./announcement/details.html" class="announcement-link">Докладніше</a>
-                                <!--end user is logged in-->
+                                <a href="/announcements/1" class="announcement-link">Докладніше</a>
                             </div>
 
                         </div>

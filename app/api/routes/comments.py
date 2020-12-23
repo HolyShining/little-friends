@@ -27,11 +27,10 @@ router = APIRouter()
     name="comments:get-comments-for-announcement",
 )
 async def list_comments_for_announcement(
-    announcement: Announcement = Depends(get_announcement_by_slug_from_path),
     user: Optional[User] = Depends(get_current_user_authorizer(required=False)),
     comments_repo: CommentsRepository = Depends(get_repository(CommentsRepository)),
 ) -> ListOfCommentsInResponse:
-    comments = await comments_repo.get_comments_for_announcement(announcement=announcement, user=user)
+    comments = await comments_repo.get_comments_for_announcement(announcement=None, user=user)
     return ListOfCommentsInResponse(comments=comments)
 
 
@@ -43,13 +42,12 @@ async def list_comments_for_announcement(
 )
 async def create_comment_for_announcement(
     comment_create: CommentInCreate = Body(..., embed=True, alias="comment"),
-    announcement: Announcement = Depends(get_announcement_by_slug_from_path),
     user: User = Depends(get_current_user_authorizer()),
     comments_repo: CommentsRepository = Depends(get_repository(CommentsRepository)),
 ) -> CommentInResponse:
     comment = await comments_repo.create_comment_for_announcement(
         body=comment_create.body,
-        announcement=announcement,
+        announcement=None,
         user=user,
     )
     return CommentInResponse(comment=comment)

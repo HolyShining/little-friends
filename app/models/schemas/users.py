@@ -13,6 +13,10 @@ class UserInLogin(InternalSchema):
 
 class UserInCreate(UserInLogin):
     name: str
+    date_of_birth: str
+    phone_number: str
+    address: str
+    pet_owner: bool
 
 
 class UserInUpdate(BaseModel):

@@ -4,8 +4,6 @@ SELECT id,
        email,
        salt,
        hashed_password,
-       bio,
-       image,
        created_at,
        updated_at
 FROM users
@@ -19,8 +17,6 @@ SELECT id,
        email,
        salt,
        hashed_password,
-       bio,
-       image,
        created_at,
        updated_at
 FROM users
@@ -29,8 +25,8 @@ LIMIT 1;
 
 
 -- name: create-new-user<!
-INSERT INTO users (name, email, salt, hashed_password)
-VALUES (:name, :email, :salt, :hashed_password)
+INSERT INTO users (name, email, salt, hashed_password, date_of_birth, phone_number, address, pet_owner, admin, block)
+VALUES (:name, :email, :salt, :hashed_password, :date_of_birth, :phone_number, :address, :pet_owner, false, false)
 RETURNING
     id, created_at, updated_at;
 
@@ -42,8 +38,6 @@ SET name            = :name,
     email           = :new_email,
     salt            = :new_salt,
     hashed_password = :new_password,
-    bio             = :new_bio,
-    image           = :new_image
 WHERE name = :name
 RETURNING
     updated_at;

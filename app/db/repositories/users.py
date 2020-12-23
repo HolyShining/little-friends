@@ -5,6 +5,8 @@ from app.db.queries.queries import queries
 from app.db.repositories.base import BaseRepository
 from app.models.domain.users import User, UserInDB
 
+import datetime
+
 
 class UsersRepository(BaseRepository):
     async def get_user_by_email(self, *, email: str) -> UserInDB:
@@ -32,8 +34,18 @@ class UsersRepository(BaseRepository):
         name: str,
         email: str,
         password: str,
+        date_of_birth: str,
+        phone_number: str,
+        address: str,
+        pet_owner: bool,
     ) -> UserInDB:
-        user = UserInDB(name=name, email=email)
+        user = UserInDB(
+            name=name, 
+            email=email, 
+            date_of_birth=date_of_birth,
+            address=address,
+            pet_owner=pet_owner,
+            phone_number=phone_number)
         user.change_password(password)
 
         async with self.connection.transaction():
@@ -42,6 +54,10 @@ class UsersRepository(BaseRepository):
                 name=user.name,
                 email=user.email,
                 salt=user.salt,
+                phone_number=user.phone_number,
+                address=user.address,
+                pet_owner=user.pet_owner,
+                date_of_birth=datetime.datetime.strptime(user.date_of_birth, '%d.%m.%Y'),
                 hashed_password=user.hashed_password,
             )
 
