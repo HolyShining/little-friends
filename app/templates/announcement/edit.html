@@ -70,6 +70,8 @@
 
                             <!-- form for change inf about announcement-->
                             <form method="POST" class="form text-center">
+
+                                <!--title-->
                                 <div class="pad row">
                                     <div class="col-2">
                                         <label for="title" class="">Заголовок:</label>
@@ -78,6 +80,8 @@
                                         <input type="text" id="title" class="form-control" value="Title">
                                     </div>
                                 </div>
+
+                                <!--description-->
                                 <div class="pad row">
                                     <div class="col-2">
                                         <label for="description" class="">Опис:</label>
@@ -102,6 +106,8 @@
                                         <label for="offer">Пропоную</label>
                                     </div>
                                 </div>
+
+                                <!--pets-->
                                 <div class="pad row">
                                     <div class="col-2">
                                         <label for="pets" class="">Домашні улюбенці:</label>
@@ -118,22 +124,21 @@
                                 </div>
                                 <!--end for pet owners-->
 
+                                <!--hashtags-->
                                 <div class="pad row">
                                     <div class="col-2">
-                                        <label for="hashtag" class="">Хештег:</label>
+                                        <label for="hashtag" class="">Хештеги:</label>
                                     </div>
                                     <div class="col-9">
                                         <select class="js-example-basic-multiple form-control" id="hashtag" name="states[]" multiple="multiple">
                                             <option value="">Alabama</option>
                                             <option value="">Wyoming</option>
                                         </select>
-                                        <script>
-                                            $(document).ready(function() {
-                                                $('.js-example-basic-multiple').select2();
-                                            });
-                                        </script>
+                                        <script src="../../static/js/select.js"></script>
                                     </div>
                                 </div>
+
+                                <!--dates-->
                                 <div class="pad row">
                                     <div class="col-2">
                                         <label class="">Дати:</label>
@@ -142,6 +147,8 @@
                                         <input type="date" class="form-control" value="12/12/2020"> <i> - </i>
                                         <input type="date" class="form-control" value="2020/12/12">
                                     </div>
+
+                                    <!--time-->
                                     <div class="col-1">
                                         <label class="">Час:</label>
                                     </div>
