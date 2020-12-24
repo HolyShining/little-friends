@@ -44,9 +44,14 @@
             </div>
           </div>
         </form>
-        <p><button type="submit" class="btn btn-outline-primary">Увійти</button></p>
-        <p>Ще не маєте акаунта? <a href="./registration.html">Зареєструйтесь</a>.</p>
+        <p><button type="submit" class="btn btn-outline-primary" id="proceed-login">Увійти</button></p>
+        <p>Ще не маєте акаунта? <a href="/registration">Зареєструйтесь</a>.</p>
       </div>
     </div>
+    <script>
+      document.querySelector("#proceed-login").onclick = (ev) => {
+        document.location.href="/";
+      }
+    </script>
   </body>
 </html>

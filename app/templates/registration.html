@@ -6,10 +6,10 @@
         <title>Little Friends</title>
         <meta name="description" content="Little Friends ...">
         <meta name="viewport" content="device = device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../templates/css/reg_radio.css">
-        <link rel="stylesheet" type="text/css" href="../templates/css/registration.css">
-        <link rel="stylesheet" type="text/css" href="../templates/css/main_reg.css">
-        <script src="../templates/js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/reg_radio.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/registration.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main_reg.css">
+        <script src="/static/js/main.js"></script>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
       <header>
         <div class="logoplace">
           <div class="logo">
-            <img src="../templates/img/logo1.png" height="80px">
+            <img src="/static/img/logo-dog.png" height="80px">
           </div>
           <div class="hr"></div>
           <div class="">
@@ -51,7 +51,7 @@
           </div>
 
           <div>Контактна інформація:
-            <p><input type="tel" maxlength="13" minlength="13" pattern="\+380[39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99][0-9]{7}" title="Введений телефон має мати наступний вигляд:<br>+380xxxxxxxxx" placeholder="Номер телефону..." name="email" required></p>
+            <p><input type="tel" maxlength="13" minlength="13" pattern="+380[39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99][0-9]{7}" title="Введений телефон має мати наступний вигляд: +380xxxxxxxxx" placeholder="Номер телефону..." name="email" required></p>
             <p><input type="email" maxlength="40" minlength="10" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail..." name="email" required></p>
           </div>
 
@@ -61,8 +61,14 @@
           </div>
           <p><a ><button type="submit" class="btn btn-outline-primary" name="button">Зареєструватись</button></a></p>
         </form>
-        <p>Вже маєте акаунт? <a href="./log_in.html">Увійдіть</a>.</p>
+        <p>Вже маєте акаунт? <a href="/login">Увійдіть</a>.</p>
       </div>
     </div>
+    <script>
+      document.querySelector("#regForm").onsubmit = (ev) => {
+        event.preventDefault();
+        document.location.href="/";
+      }
+    </script>
   </body>
 </html>

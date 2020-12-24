@@ -64,3 +64,11 @@ async def about(request: Request):
 @router.get("/pets/{id_}")
 async def about(request: Request, id_: str):
     return TEMPLATES.TemplateResponse("pet/pet_info.html", {"request": request})
+
+@router.get("/login")
+async def login(request: Request):
+    return TEMPLATES.TemplateResponse("log_in.html", {"request": request})
+
+@router.get("/registration")
+async def registration(request: Request):
+    return TEMPLATES.TemplateResponse("registration.html", {"request": request})
