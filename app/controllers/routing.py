@@ -49,10 +49,6 @@ async def about(request: Request, id_: str):
 async def about(request: Request, id_: str):
     return TEMPLATES.TemplateResponse("announcement/edit.html", {"request": request})
 
-@router.post("/announcements/{id_}/edit")
-async def profile(request: Request, id_: str):
-    return TEMPLATES.TemplateResponse("announcement/details.html", {"request": request})
-
 @router.get("/announcement/create")
 async def about(request: Request):
     return TEMPLATES.TemplateResponse("announcement/create.html", {"request": request})
@@ -64,6 +60,10 @@ async def about(request: Request):
 @router.get("/pets/{id_}")
 async def about(request: Request, id_: str):
     return TEMPLATES.TemplateResponse("pet/pet_info.html", {"request": request})
+
+@router.get("/pet/{id_}/edit")
+async def about(request: Request, id_: str):
+    return TEMPLATES.TemplateResponse("pet/edit_petinfo.html", {"request": request})
 
 @router.get("/login")
 async def login(request: Request):
